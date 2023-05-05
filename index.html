@@ -391,9 +391,13 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					</div>
 
 					<div class="row">
+					  <botton id="X" onclick="cancel()" style="border:none;font-size:25px;margin-left:93%;color:red;display:none;">X</botton>
+					  <embed id="portfolio" width="100%" height="500px" src="portfolio1.html" style="display:none">
 						<div class="col-md-12 animate-box">
-							<p><a href="portfolio.html" class="btn btn-primary btn-lg btn-load-more">Load Portfolio<i class="icon-reload"></i></a></p>
+					 <botton onclick="showwork()" class="btn btn-primary btn-lg btn-load-more">Load Portfolio <i class="icon-reload"></i></botton>
+<!--							<p><a href="portfolio.html" class="btn btn-primary btn-lg btn-load-more">Load Portfolio<i class="icon-reload"></i></a></p>-->
 						</div>
+					
 					</div>
 				</div>
 			</section>
@@ -539,6 +543,14 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
         $("body").addClass("loaded");
 
       };
+  function showwork() {
+    document.getElementById('portfolio').style.display = 'block';
+    document.getElementById('X').style.display = 'block';
+  }
+  function cancel() {
+    document.getElementById('X').style.display = 'none';
+    document.getElementById('portfolio').style.display = 'none';
+  }
 	</script>
 
 	</body>
